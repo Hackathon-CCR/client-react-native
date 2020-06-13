@@ -38,7 +38,7 @@ function App() {
                     <Stack.Screen
                         options={{ ...headerOptions, title: 'Home' }}
                         name="Home"
-                        component={Home}
+                        component={Login}
                     />
                     <Stack.Screen
                         options={{ ...headerOptions, title: 'De volta para casa' }}

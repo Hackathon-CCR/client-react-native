@@ -40,7 +40,10 @@ function Login() {
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.logo}>
-                        <Image source={require('../../../imagens/logo.png')} />
+                        <Image
+                            source={require('../../../imagens/logoNova.png')}
+                            style={{ marginLeft: 20 }}
+                        />
                     </View>
                 </View>
                 <View style={styles.inputArea}>
