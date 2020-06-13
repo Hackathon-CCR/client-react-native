@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Avatar, Button, Card, Title, Paragraph } from "react-native-paper";
 import { styles } from "./styles";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -42,7 +42,11 @@ export default function Home() {
             </Paragraph>
           </Card.Content>
           <Card.Actions>
-            <Button color="white" style={styles.buttonCard}>
+            <Button
+              color="white"
+              style={styles.buttonCard}
+              onPress={() => props.navigation.navigate("Alerta")}
+            >
               Acionar
             </Button>
           </Card.Actions>
