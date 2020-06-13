@@ -9,6 +9,7 @@ import { StatusBar } from "react-native";
 import Alerta from "./src/views/alerta/index";
 import Saude from "./src/views/saude";
 import BoasVindas from "./src/views/boasvindas";
+import Perfil from "./src/views/perfil/index";
 
 StatusBar.setBarStyle("light-content");
 

@@ -51,7 +51,7 @@ export default function Home(props) {
             <Button
               color="white"
               style={styles.buttonCard}
-              onPress={() => props.navigation.navigate("Perfil")}
+              onPress={() => props.navigation.navigate("Alerta")}
             >
               Acionar
             </Button>
