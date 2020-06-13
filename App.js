@@ -30,11 +30,15 @@ function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
-            options={headerOptions}
+            options={{ ...headerOptions, headerLeft: null }}
             name="BoasVindas"
             component={BoasVindas}
           />
-          <Stack.Screen options={headerOptions} name="Home" component={Home} />
+          <Stack.Screen
+            options={{ ...headerOptions, headerLeft: null }}
+            name="Home"
+            component={Home}
+          />
           <Stack.Screen
             options={headerOptions}
             name="Login"
