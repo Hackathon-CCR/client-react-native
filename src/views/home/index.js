@@ -1,17 +1,24 @@
 import React from 'react';
-import { View, ScrollView, Image } from 'react-native';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
+import { View, ScrollView, Text, TextInput, Image } from 'react-native';
+import { Button, Card, Paragraph } from 'react-native-paper';
 import { styles } from './styles';
 import PhoneImage from '../../../imagens/icones/phone.png';
-import SosImage from '../../../imagens/icones/sos.png';
-import SaudeImage from '../../../imagens/icones/health.png';
-import RankingImage from '../../../imagens/icones/ranking_1.png';
 
 export default function Home(props) {
-	return (
-		<ScrollView>
-			<View style={styles.container}>
-				<Card style={{ ...styles.card, height: 310 }}>
+    return (
+        <ScrollView>
+            <View style={{ backgroundColor: '#6ED4C8' }}>
+                <View style={styles.container}>
+                    <Text style={styles.title}>Para onde você quer ir?</Text>
+
+                    <TextInput style={styles.input} placeholder="" autoCorrect={false} />
+                    <TextInput style={styles.input} placeholder="" autoCorrect={false} />
+                </View>
+
+                {/* <View style={styles.logo}>
+					<Image source={require('../../../imagens/place.png')} />
+				</View> */}
+                {/* <Card style={{ ...styles.card, height: 310 }}>
 					<Card.Title
 						title='Ativar Controlador de Descanso'
 						style={styles.titleCard}
@@ -31,62 +38,8 @@ export default function Home(props) {
 							Ativar
 						</Button>
 					</Card.Actions>
-				</Card>
-
-				<Card style={{ ...styles.card, height: 270 }}>
-					<Card.Title title='Alerta de Perigo' style={styles.titleCard} titleStyle={styles.textTitleCard} />
-					<Card.Content>
-						<Image style={styles.imagem} source={SosImage} />
-						<Paragraph style={{ marginTop: 10 }}>
-							Acione o alerta para uma central de monitoramento e aguarde o socorro.
-						</Paragraph>
-					</Card.Content>
-					<Card.Actions>
-						<Button
-							color='white'
-							style={styles.buttonCard}
-							onPress={() => props.navigation.navigate('Alerta')}
-						>
-							Acionar
-						</Button>
-					</Card.Actions>
-				</Card>
-
-				<Card style={{ ...styles.card, height: 270 }}>
-					<Card.Title title='Saúde' style={styles.titleCard} titleStyle={styles.textTitleCard} />
-					<Card.Content>
-						<Image style={styles.imagem} source={SaudeImage} />
-						<Paragraph style={{ marginTop: 10 }}>
-							Acompanhe seus exames feitos nos postos da CCR e receba seus exames via App.
-						</Paragraph>
-					</Card.Content>
-					<Card.Actions>
-						<Button
-							color='white'
-							style={styles.buttonCard}
-							onPress={() => props.navigation.navigate('Saude')}
-						>
-							Ver
-						</Button>
-					</Card.Actions>
-				</Card>
-
-				<Card style={{ ...styles.card, height: 290 }}>
-					<Card.Title title='Frete Ranking' style={styles.titleCard} titleStyle={styles.textTitleCard} />
-					<Card.Content>
-						<Image style={styles.imagem} source={RankingImage} />
-						<Paragraph style={{ marginTop: 10 }}>
-							Mostre que você é um profissional exemplar e destaque-se para as empresas encontrar o seu
-							perfil.
-						</Paragraph>
-					</Card.Content>
-					<Card.Actions>
-						<Button color='white' style={styles.buttonCard}>
-							Acessar
-						</Button>
-					</Card.Actions>
-				</Card>
-			</View>
-		</ScrollView>
-	);
+				</Card>				 */}
+            </View>
+        </ScrollView>
+    );
 }
