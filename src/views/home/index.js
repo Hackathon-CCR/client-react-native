@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
-import { Avatar, Button, Card, Title, Paragraph } from "react-native-paper";
+import { View, ScrollView, Image } from "react-native";
+import { Button, Card, Title, Paragraph } from "react-native-paper";
 import { styles } from "./styles";
 import PhoneImage from "../../../imagens/icones/phone.png";
 import SosImage from "../../../imagens/icones/sos.png";
@@ -19,16 +19,7 @@ export default function Home(props) {
           />
           <Card.Content>
             <View style={styles.contentCard}>
-              <Image
-                style={{
-                  width: 100,
-                  height: 100,
-                  display: "flex",
-                  alignSelf: "center",
-                  marginTop: 10,
-                }}
-                source={PhoneImage}
-              />
+              <Image style={styles.imagem} source={PhoneImage} />
               <Paragraph style={{ marginTop: 10 }}>
                 Ative o controlador de descanso, ganhe segurança em suas viagens
                 e aumente sua pontuação para ficar em destaque para as empresas
@@ -50,16 +41,7 @@ export default function Home(props) {
             titleStyle={styles.textTitleCard}
           />
           <Card.Content>
-            <Image
-              style={{
-                width: 100,
-                height: 100,
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 10,
-              }}
-              source={SosImage}
-            />
+            <Image style={styles.imagem} source={SosImage} />
             <Paragraph style={{ marginTop: 10 }}>
               Acione o alerta para uma central de monitoramento e aguarde o
               socorro.
@@ -83,23 +65,18 @@ export default function Home(props) {
             titleStyle={styles.textTitleCard}
           />
           <Card.Content>
-            <Image
-              style={{
-                width: 100,
-                height: 100,
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 10,
-              }}
-              source={SaudeImage}
-            />
+            <Image style={styles.imagem} source={SaudeImage} />
             <Paragraph style={{ marginTop: 10 }}>
               Acompanhe seus exames feitos nos postos da CCR e receba seus
               exames via App.
             </Paragraph>
           </Card.Content>
           <Card.Actions>
-            <Button color="white" style={styles.buttonCard}>
+            <Button
+              color="white"
+              style={styles.buttonCard}
+              onPress={() => props.navigation.navigate("Saude")}
+            >
               Ver
             </Button>
           </Card.Actions>
@@ -112,16 +89,7 @@ export default function Home(props) {
             titleStyle={styles.textTitleCard}
           />
           <Card.Content>
-            <Image
-              style={{
-                width: 100,
-                height: 100,
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 10,
-              }}
-              source={RankingImage}
-            />
+            <Image style={styles.imagem} source={RankingImage} />
             <Paragraph style={{ marginTop: 10 }}>
               Mostre que você é um profissional exemplar e destaque-se para as
               empresas encontrar o seu perfil.
