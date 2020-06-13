@@ -48,5 +48,12 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 5
+  },
+  imagem: {
+    width: 100,
+    height: 100,
+    display: "flex",
+    alignSelf: "center",
+    marginTop: 10
   }
 });

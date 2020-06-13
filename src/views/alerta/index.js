@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import { Avatar, Button, Card, Title, Paragraph } from "react-native-paper";
 import { styles } from "./styles";
+import security from "../../../imagens/icones/security.png";
 
 export default function Alerta() {
   return (
@@ -13,14 +14,15 @@ export default function Alerta() {
         </View>
       </View>
       <View style={styles.container}>
-        <Card style={{ ...styles.card, height: 150 }}>
+        <Card style={{ ...styles.card, height: 270 }}>
           <Card.Title
             title="Relatar atividade Suspeita"
             style={styles.titleCard}
             titleStyle={styles.textTitleCard}
           />
+          <Image style={styles.imagem} source={security}></Image>
           <Card.Content>
-            <Paragraph>
+            <Paragraph style={{ marginTop: 10 }}>
               Insira uma informação de atividade suspeita e contribua para
               outros usuários ficarem a salvos!
             </Paragraph>
