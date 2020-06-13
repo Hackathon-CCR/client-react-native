@@ -52,7 +52,6 @@ function App() {
                     />
                     <Stack.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Stack.Screen options={headerOptions} name="Saude" component={Saude} />
-                    <Stack.Screen options={headerOptions} name="Perfil" component={Perfil} />
                 </Stack.Navigator>
             </NavigationContainer>
         </PaperProvider>
