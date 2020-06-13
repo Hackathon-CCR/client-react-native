@@ -6,6 +6,12 @@ import { styles } from "./styles";
 export default function Alerta() {
   return (
     <ScrollView>
+      <View style={styles.circleContainer}>
+        <View style={styles.circle}>
+          <Text style={styles.text}>SOLICITAR</Text>
+          <Text style={styles.text}>SOCORRO</Text>
+        </View>
+      </View>
       <View style={styles.container}>
         <Card style={{ ...styles.card, height: 150 }}>
           <Card.Title
