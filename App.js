@@ -16,7 +16,7 @@ const Stack = createStackNavigator();
 
 const headerOptions = {
     headerStyle: {
-        backgroundColor: '#32e0c4',
+        backgroundColor: '#7A7E7E',
     },
     headerTitleStyle: {
         color: '#FFF',
