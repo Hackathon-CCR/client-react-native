@@ -9,22 +9,59 @@ export default function Home(props) {
         <ScrollView>
             <View>
                 <View style={styles.container}>
+                    <Image style={styles.tinyLogo} source={require('../../../imagens/place.png')} />
                     <Text style={styles.title}>Para onde você quer ir?</Text>
 
-                    <TextInput style={styles.input} placeholder="Origem" autoCorrect={false} />
-                    <TextInput style={styles.input} placeholder="Destino" autoCorrect={false} />
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Data de Saída"
-                        autoCorrect={false}
-                    />
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Quantidade de Passageiros"
-                        autoCorrect={false}
-                    />
-                    <Button color="white" style={styles.secondButton} onPress={() => handleLogin()}>
-                        CADASTRAR
+                    <View style={styles.SectionStyle}>
+                        <TextInput
+                            style={{ flex: 1 }}
+                            placeholder="Origem"
+                            underlineColorAndroid="transparent"
+                        />
+                        <Image
+                            source={require('../../../imagens/icones/location.png')} //Change your icon image here
+                            style={styles.ImageStyle}
+                        />
+                    </View>
+
+                    <View style={styles.SectionStyle}>
+                        <TextInput
+                            style={{ flex: 1 }}
+                            placeholder="Destino"
+                            underlineColorAndroid="transparent"
+                        />
+                        <Image
+                            source={require('../../../imagens/icones/location.png')} //Change your icon image here
+                            style={styles.ImageStyle}
+                        />
+                    </View>
+
+                    <View style={styles.SectionStyle}>
+                        <TextInput
+                            style={{ flex: 1 }}
+                            placeholder="Data de Saída"
+                            underlineColorAndroid="transparent"
+                        />
+                        <Image
+                            source={require('../../../imagens/icones/dateicon.png')} //Change your icon image here
+                            style={styles.ImageStyle}
+                        />
+                    </View>
+
+                    <View style={styles.SectionStyle}>
+                        <TextInput
+                            style={{ flex: 1 }}
+                            placeholder="Quantidade de passageiros"
+                            underlineColorAndroid="transparent"
+                        />
+                        <Image
+                            source={require('../../../imagens/icones/face.png')} //Change your icon image here
+                            style={styles.ImageStyle}
+                        />
+                    </View>
+
+                    <Button color="white" style={styles.mainButton} onPress={() => handleLogin()}>
+                        BUSCAR
                     </Button>
                 </View>
 
