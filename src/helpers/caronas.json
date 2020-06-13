@@ -1,0 +1,67 @@
+{
+    "data": [
+        {
+            "IdCarona": 1,
+            "Origem": "Juiz de Fora",
+            "Destino": "Rio de Janeiro",
+            "DataSaida": "2020-06-20",
+            "HoraSaida": "17:00",
+            "QtdeLugares": 2,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 2,
+            "Origem": "Juiz de Fora",
+            "Destino": "Rio de Janeiro",
+            "DataSaida": "2020-06-21",
+            "HoraSaida": "12:00",
+            "QtdeLugares": 1,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 3,
+            "Origem": "Juiz de Fora",
+            "Destino": "Rio de Janeiro",
+            "DataSaida": "2020-06-25",
+            "HoraSaida": "09:00",
+            "QtdeLugares": 2,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 4,
+            "Origem": "Juiz de Fora",
+            "Destino": "Rio de Janeiro",
+            "DataSaida": "2020-06-30",
+            "HoraSaida": "09:00",
+            "QtdeLugares": 2,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 5,
+            "Origem": "Juiz de Fora",
+            "Destino": "Rio de Janeiro",
+            "DataSaida": "2020-06-28",
+            "HoraSaida": "23:00",
+            "QtdeLugares": 1,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 6,
+            "Origem": "Juiz de Fora",
+            "Destino": "Sao Paulo",
+            "DataSaida": "2020-06-18",
+            "HoraSaida": "10:00",
+            "QtdeLugares": 1,
+            "IdProvedor": 1
+        },
+        {
+            "IdCarona": 7,
+            "Origem": "Juiz de Fora",
+            "Destino": "Sao Paulo",
+            "DataSaida": "2020-06-18",
+            "HoraSaida": "10:00",
+            "QtdeLugares": 1,
+            "IdProvedor": 1
+        }
+    ]
+}
