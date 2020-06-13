@@ -7,7 +7,7 @@ import SosImage from "../../../imagens/icones/sos.png";
 import SaudeImage from "../../../imagens/icones/health.png";
 import RankingImage from "../../../imagens/icones/ranking_1.png";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -66,7 +66,11 @@ export default function Home() {
             </Paragraph>
           </Card.Content>
           <Card.Actions>
-            <Button color="white" style={styles.buttonCard}>
+            <Button
+              color="white"
+              style={styles.buttonCard}
+              onPress={() => props.navigation.navigate("Alerta")}
+            >
               Acionar
             </Button>
           </Card.Actions>
