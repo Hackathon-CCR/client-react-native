@@ -9,8 +9,11 @@ export const styles = StyleSheet.create({
 		backgroundColor: 'rgba(196, 196, 196, 0)'
 	},
 	logo: {
+		height: 150,
 		flex: 1,
-		justifyContent: 'center',
+		width: null,
+		height: null,
+		resizeMode: 'contain'
 	},
 	inputArea: {
 		flex: 1,
@@ -24,16 +27,13 @@ export const styles = StyleSheet.create({
 		flexDirection: 'row',
 		marginHorizontal: 20
 	},
-	input: {
-		height: 50,
-		width: 280,
-		backgroundColor: '#FFF',
-		marginBottom: 8,
-		marginHorizontal: 30,
-		fontSize: 16
-	},
 	description: {
-		fontSize: 14,
+        width: 250,
+        fontSize: 14,
+        fontStyle: "normal",
+        fontWeight: "bold",
+        fontSize: 18,
+        top: 6,
 		marginHorizontal: 30,
 		marginBottom: 5
 	},

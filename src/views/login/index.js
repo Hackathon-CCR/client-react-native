@@ -16,7 +16,7 @@ export default function Login() {
 
 	function handleLogin() {
 		if(login === "admin" && password === "admin") {
-			navigation.navigate('Home');
+			navigation.navigate('BoasVindas');
 		} else {
 			Toast.show('Falha ao autenticar, verifique seus dados!', {
 				containerStyle:{
