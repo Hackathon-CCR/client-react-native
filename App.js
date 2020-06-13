@@ -10,6 +10,7 @@ import Alerta from './src/views/alerta/index';
 import Saude from './src/views/saude';
 import BoasVindas from './src/views/boasvindas';
 import Perfil from './src/views/perfil';
+import ListaCarona from './src/views/lista-carona/index';
 
 StatusBar.setBarStyle('light-content');
 
@@ -29,7 +30,7 @@ function App() {
     return (
         <PaperProvider>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Login">
+                <Stack.Navigator initialRouteName="ListaCarona">
                     <Stack.Screen
                         options={{ ...headerOptions, title: 'Bem vindo' }}
                         name="BoasVindas"
@@ -49,6 +50,11 @@ function App() {
                         options={{ ...headerOptions, title: 'Meu Perfil' }}
                         name="Perfil"
                         component={Perfil}
+                    />
+                    <Stack.Screen
+                        options={{ ...headerOptions, title: 'Lista de Carona' }}
+                        name="ListaCarona"
+                        component={ListaCarona}
                     />
                     <Stack.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Stack.Screen options={headerOptions} name="Saude" component={Saude} />
