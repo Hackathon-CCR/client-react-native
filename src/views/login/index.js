@@ -5,8 +5,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
 import { TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import Toast from 'react-native-tiny-toast';
 import { StackActions } from '@react-navigation/native';
-import ImagemLogo from '../../../imagens/logoNova.png';
 
 function Login() {
     const [login, setLogin] = useState('');
@@ -40,7 +40,7 @@ function Login() {
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.logo}>
-                        <Image source={ImagemLogo} width={50} height={50} />
+                        <Image source={require('../../../imagens/logo.png')} />
                     </View>
                 </View>
                 <View style={styles.inputArea}>

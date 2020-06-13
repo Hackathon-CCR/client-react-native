@@ -9,6 +9,7 @@ import { StatusBar } from 'react-native';
 import Alerta from './src/views/alerta/index';
 import Saude from './src/views/saude';
 import BoasVindas from './src/views/boasvindas';
+import Perfil from './src/views/perfil';
 
 StatusBar.setBarStyle('light-content');
 
@@ -43,6 +44,11 @@ function App() {
                         options={{ ...headerOptions, title: 'De volta para casa' }}
                         name="Login"
                         component={Login}
+                    />
+                    <Stack.Screen
+                        options={{ ...headerOptions, title: 'Meu Perfil' }}
+                        name="Perfil"
+                        component={Perfil}
                     />
                     <Stack.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Stack.Screen options={headerOptions} name="Saude" component={Saude} />

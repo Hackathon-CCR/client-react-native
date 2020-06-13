@@ -7,12 +7,25 @@ import PhoneImage from '../../../imagens/icones/phone.png';
 export default function Home(props) {
     return (
         <ScrollView>
-            <View style={{ backgroundColor: '#6ED4C8' }}>
+            <View>
                 <View style={styles.container}>
                     <Text style={styles.title}>Para onde você quer ir?</Text>
 
-                    <TextInput style={styles.input} placeholder="" autoCorrect={false} />
-                    <TextInput style={styles.input} placeholder="" autoCorrect={false} />
+                    <TextInput style={styles.input} placeholder="Origem" autoCorrect={false} />
+                    <TextInput style={styles.input} placeholder="Destino" autoCorrect={false} />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Data de Saída"
+                        autoCorrect={false}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Quantidade de Passageiros"
+                        autoCorrect={false}
+                    />
+                    <Button color="white" style={styles.secondButton} onPress={() => handleLogin()}>
+                        CADASTRAR
+                    </Button>
                 </View>
 
                 {/* <View style={styles.logo}>
