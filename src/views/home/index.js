@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, ScrollView, Text, TextInput, Image } from 'react-native';
-import { Button, Card, Paragraph } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import { styles } from './styles';
-import PhoneImage from '../../../imagens/icones/phone.png';
 
-export default function Home(props) {
+export default function Home() {
     return (
         <ScrollView>
             <View>
