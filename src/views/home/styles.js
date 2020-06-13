@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
 	},
   titleCard: {
     height: 20,
-    backgroundColor: "#A9432E",
+    backgroundColor: "#32e0c4",
     color: "#FFF",
   },
   textTitleCard: {
@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonCard: {
-    backgroundColor: "#A9432E",
+    backgroundColor: "#393e46",
     color: "#fff",
   },
   imagem: {

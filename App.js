@@ -15,29 +15,33 @@ StatusBar.setBarStyle('light-content');
 const Stack = createStackNavigator();
 
 const headerOptions = {
-	headerStyle: {
-		backgroundColor: '#A9432E'
-	},
-	headerTitleStyle: {
-		color: '#FFF'
-	},
-	headerTintColor: '#FFF'
+    headerStyle: {
+        backgroundColor: '#32e0c4',
+    },
+    headerTitleStyle: {
+        color: '#FFF',
+    },
+    headerTintColor: '#FFF',
 };
 
 function App() {
-	return (
-		<PaperProvider>
-			<NavigationContainer>
-				<Stack.Navigator initialRouteName='Login'>
-					<Stack.Screen options={headerOptions} name='BoasVindas' component={BoasVindas}/>
-					<Stack.Screen options={headerOptions} name='Home' component={Home} />
-					<Stack.Screen options={headerOptions} name='Login' component={Login} />
-					<Stack.Screen options={headerOptions} name='Alerta' component={Alerta} />
-					<Stack.Screen options={headerOptions} name='Saude' component={Saude} />
-				</Stack.Navigator>
-			</NavigationContainer>
-		</PaperProvider>
-	);
+    return (
+        <PaperProvider>
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName="Login">
+                    <Stack.Screen
+                        options={headerOptions}
+                        name="BoasVindas"
+                        component={BoasVindas}
+                    />
+                    <Stack.Screen options={headerOptions} name="Home" component={Home} />
+                    <Stack.Screen options={headerOptions} name="Login" component={Login} />
+                    <Stack.Screen options={headerOptions} name="Alerta" component={Alerta} />
+                    <Stack.Screen options={headerOptions} name="Saude" component={Saude} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </PaperProvider>
+    );
 }
 
 export default App;
