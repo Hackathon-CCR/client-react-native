@@ -30,7 +30,7 @@ function App() {
     return (
         <PaperProvider>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="ListaCarona">
+                <Stack.Navigator initialRouteName="Login">
                     <Stack.Screen
                         options={{ ...headerOptions, title: 'Bem vindo' }}
                         name="BoasVindas"
