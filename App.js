@@ -7,6 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "react-native";
 import Alerta from "./src/views/alerta/index";
+import Saude from "./src/views/saude";
 
 StatusBar.setBarStyle("light-content");
 
@@ -14,12 +15,12 @@ const Stack = createStackNavigator();
 
 const headerOptions = {
   headerStyle: {
-    backgroundColor: "#A9432E"
+    backgroundColor: "#A9432E",
   },
   headerTitleStyle: {
-    color: "#FFF"
+    color: "#FFF",
   },
-  headerTintColor: "#FFF"
+  headerTintColor: "#FFF",
 };
 
 function App() {
@@ -37,6 +38,11 @@ function App() {
             options={headerOptions}
             name="Alerta"
             component={Alerta}
+          />
+          <Stack.Screen
+            options={headerOptions}
+            name="Saude"
+            component={Saude}
           />
         </Stack.Navigator>
       </NavigationContainer>
