@@ -26,7 +26,10 @@ export default function BoasVindas() {
                     </Text>
                 </View>
                 <View style={styles.logo}>
-                    <Image source={require('../../../imagens/boasvindas.png')} />
+                    <Image
+                        source={require('../../../imagens/welcome.png')}
+                        style={{ width: 300, height: 300 }}
+                    />
                 </View>
             </View>
             <View style={styles.footer}>
