@@ -40,6 +40,7 @@ function App() {
                     <Drawer.Screen
                         options={{
                             ...headerOptions,
+                            title: 'Boas Vindas',
                         }}
                         name="BoasVindas"
                         component={BoasVindas}
