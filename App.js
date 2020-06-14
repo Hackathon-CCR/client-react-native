@@ -13,6 +13,7 @@ import Perfil from './src/views/perfil';
 import { useWindowDimensions } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerItems } from '@react-navigation/drawer';
+import ListaCarona from './src/views/lista-carona';
 
 const headerOptions = {
     headerStyle: {
@@ -63,6 +64,11 @@ function App() {
                         options={{ ...headerOptions, title: 'Meu Perfil' }}
                         name="Perfil"
                         component={Perfil}
+                    />
+                    <Drawer.Screen
+                        options={{ ...headerOptions, title: 'Lista de Carona' }}
+                        name="ListaCarona"
+                        component={ListaCarona}
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />

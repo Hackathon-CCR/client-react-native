@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, ScrollView, Text, TextInput, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import { styles } from './styles';
+import caronas from '../../helpers/caronas.json';
 
 export default function Home() {
+    const [origem, setOrigem] = useState('');
+    const [listaViajens, setListaViajens] = useState(caronas);
+
+    useEffect(() => {
+        let newCaronas = caronas.data;
+        if (origem && origem !== null) {
+            newCaronas = newCaronas.filter((item) => item.Origem.search(origem) !== -1);
+        }
+        setListaViajens(newCaronas);
+    }, [origem]);
+
     return (
         <ScrollView>
             <View>
@@ -16,6 +28,7 @@ export default function Home() {
                             style={{ flex: 1 }}
                             placeholder="Origem"
                             underlineColorAndroid="transparent"
+                            onChangeText={(text) => setOrigem(text)}
                         />
                         <Image
                             source={require('../../../imagens/icones/location.png')} //Change your icon image here
