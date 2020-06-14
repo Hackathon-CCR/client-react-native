@@ -17,6 +17,7 @@ import ListaCarona from './src/views/lista-carona';
 import CadastroCarona from './src/views/cadastro-carona';
 import DetalhesCarona from './src/views/detalhes-carona';
 import ReservaCarona from './src/views/reserva-carona';
+import ConfirmacaoCarona from './src/views/confirmacao-carona';
 
 StatusBar.setBarStyle('light-content');
 
@@ -88,6 +89,11 @@ function App() {
                         options={{ ...headerOptions, title: 'Reservar Carona' }}
                         name="ReservaCarona"
                         component={ReservaCarona}
+                    />
+                    <Drawer.Screen
+                        options={{ ...headerOptions, title: 'Confirmação Carona' }}
+                        name="ConfirmacaoCarona"
+                        component={ConfirmacaoCarona}
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />
