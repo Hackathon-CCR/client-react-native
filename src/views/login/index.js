@@ -6,7 +6,6 @@ import { styles } from './styles';
 import { TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import Toast from 'react-native-tiny-toast';
-import { StackActions } from '@react-navigation/native';
 
 function Login() {
     const [login, setLogin] = useState('');
@@ -16,7 +15,7 @@ function Login() {
 
     function handleLogin() {
         if (login === 'admin' && password === 'admin') {
-            navigation.dispatch(StackActions.replace('BoasVindas'));
+            navigation.jumpTo('BoasVindas');
         } else {
             Toast.show('Falha ao autenticar, verifique seus dados!', {
                 containerStyle: {

@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 20,
         backgroundColor: 'rgba(196, 196, 196, 0)',
+        marginTop: 30,
     },
     logo: {
         flex: 1,

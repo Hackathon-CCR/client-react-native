@@ -10,11 +10,11 @@ import Alerta from './src/views/alerta/index';
 import Saude from './src/views/saude';
 import BoasVindas from './src/views/boasvindas';
 import Perfil from './src/views/perfil';
-import ListaCarona from './src/views/lista-carona/index';
-
-StatusBar.setBarStyle('light-content');
-
-const Stack = createStackNavigator();
+import { useWindowDimensions } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { DrawerItems } from '@react-navigation/drawer';
+import ListaCarona from './src/views/lista-carona';
+import CadastroCarona from './src/views/cadastro-carona';
 
 const headerOptions = {
     headerStyle: {
@@ -26,39 +26,59 @@ const headerOptions = {
     headerTintColor: '#FFF',
 };
 
+const Drawer = createDrawerNavigator();
+
 function App() {
+    const dimensions = useWindowDimensions();
+
+    const isLargeScreen = dimensions.width >= 768;
+
     return (
         <PaperProvider>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Login">
-                    <Stack.Screen
-                        options={{ ...headerOptions, title: 'Bem vindo' }}
+                <Drawer.Navigator
+                    drawerType={isLargeScreen ? 'permanent' : 'back'}
+                    drawerStyle={isLargeScreen ? null : { width: '100%' }}
+                    overlayColor="transparent"
+                    initialRouteName="Login"
+                >
+                    <Drawer.Screen
+                        options={{
+                            ...headerOptions,
+                        }}
                         name="BoasVindas"
                         component={BoasVindas}
                     />
-                    <Stack.Screen
+                    <Drawer.Screen
                         options={{ ...headerOptions, title: 'Home' }}
                         name="Home"
                         component={Home}
                     />
-                    <Stack.Screen
-                        options={{ ...headerOptions, title: 'De volta para casa' }}
+                    <Drawer.Screen
+                        options={{
+                            ...headerOptions,
+                        }}
                         name="Login"
                         component={Login}
                     />
-                    <Stack.Screen
+                    <Drawer.Screen
                         options={{ ...headerOptions, title: 'Meu Perfil' }}
                         name="Perfil"
                         component={Perfil}
                     />
-                    <Stack.Screen
+                    <Drawer.Screen
                         options={{ ...headerOptions, title: 'Lista de Carona' }}
                         name="ListaCarona"
                         component={ListaCarona}
                     />
-                    <Stack.Screen options={headerOptions} name="Alerta" component={Alerta} />
-                    <Stack.Screen options={headerOptions} name="Saude" component={Saude} />
-                </Stack.Navigator>
+                    <Drawer.Screen
+                        options={{ ...headerOptions, title: 'Meus Trajetos' }}
+                        name="CadastroCarona"
+                        component={CadastroCarona}
+                    />
+                    <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
+                    <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />
+                </Drawer.Navigator>
             </NavigationContainer>
         </PaperProvider>
     );

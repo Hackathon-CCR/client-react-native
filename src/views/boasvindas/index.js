@@ -4,13 +4,12 @@ import { Button } from 'react-native-paper';
 import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { StackActions } from '@react-navigation/native';
 
 export default function BoasVindas() {
     const navigation = useNavigation();
 
     function handleHome() {
-        navigation.dispatch(StackActions.replace('Home'));
+        navigation.jumpTo('Home');
     }
 
     return (
