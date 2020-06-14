@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { StackActions } from '@react-navigation/native';
+import { setFirstTime } from '../../services/auth';
 
 export default function BoasVindas() {
     const navigation = useNavigation();
 
     function handleHome() {
-        navigation.jumpTo('Home');
+        navigation.dispatch(StackActions.replace('Home'));
     }
+
+    useEffect(() => {
+        function setFT() {
+            setFirstTime().then((x) => {
+                return;
+            });
+        }
+
+        setFT();
+    }, []);
 
     return (
         <ScrollView>

@@ -4,6 +4,8 @@ import { Button } from 'react-native-paper';
 import { styles } from './styles';
 import caronas from '../../helpers/caronas.json';
 import { useNavigation } from '@react-navigation/native';
+import { isAuthenticated, logout } from '../../services/auth';
+import { StackActions } from '@react-navigation/native';
 
 export default function Home() {
     const [origem, setOrigem] = useState('');
@@ -19,14 +21,34 @@ export default function Home() {
         setListaViajens(newCaronas);
     }, [origem]);
 
+    useEffect(() => {
+        function checkAuth() {
+            isAuthenticated().then(async (x) => {
+                if (!x) {
+                    navigation.dispatch(StackActions.replace('Login'));
+                }
+            });
+        }
+
+        checkAuth();
+    }, []);
+
     handleBuscar = () => {
-        navigation.jumpTo('ListaCarona', { viajens: listaViajens });
+        navigation.navigate('ListaCarona', { viajens: listaViajens });
     };
 
     return (
         <ScrollView>
             <View>
                 <View style={styles.container}>
+                    <Button
+                        onPress={async () => {
+                            await logout();
+                            navigation.dispatch(StackActions.replace('Login'));
+                        }}
+                    >
+                        Logout
+                    </Button>
                     <Image style={styles.tinyLogo} source={require('../../../imagens/place.png')} />
                     <Text style={styles.title}>Para onde você quer ir?</Text>
 

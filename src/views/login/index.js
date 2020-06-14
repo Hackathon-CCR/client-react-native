@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -6,6 +6,8 @@ import { styles } from './styles';
 import { TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import Toast from 'react-native-tiny-toast';
+import { StackActions } from '@react-navigation/native';
+import { isAuthenticated, logout, setAuth, IsFirstTime } from '../../services/auth';
 
 function Login() {
     const [login, setLogin] = useState('');
@@ -13,9 +15,29 @@ function Login() {
 
     const navigation = useNavigation();
 
-    function handleLogin() {
+    useEffect(() => {
+        function checkAuth() {
+            isAuthenticated().then(async (x) => {
+                if (x) {
+                    navigation.dispatch(StackActions.replace('Home'));
+                }
+            });
+        }
+
+        checkAuth();
+    }, []);
+
+    async function handleLogin() {
         if (login === 'admin' && password === 'admin') {
-            navigation.jumpTo('BoasVindas');
+            await setAuth();
+
+            const isFirstTime = await IsFirstTime();
+
+            if (isFirstTime) {
+                navigation.dispatch(StackActions.replace('BoasVindas'));
+            } else {
+                navigation.dispatch(StackActions.replace('Home'));
+            }
         } else {
             Toast.show('Falha ao autenticar, verifique seus dados!', {
                 containerStyle: {
@@ -68,10 +90,18 @@ function Login() {
                     <Text style={styles.forgot}>Esqueci a senha</Text>
                 </View>
                 <View style={styles.footer}>
-                    <Button color="white" style={styles.mainButton} onPress={() => handleLogin()}>
+                    <Button
+                        color="white"
+                        style={styles.mainButton}
+                        onPress={async () => await handleLogin()}
+                    >
                         ENTRAR
                     </Button>
-                    <Button color="white" style={styles.secondButton} onPress={() => handleLogin()}>
+                    <Button
+                        color="white"
+                        style={styles.secondButton}
+                        onPress={async () => await handleLogin()}
+                    >
                         CADASTRAR
                     </Button>
                 </View>
