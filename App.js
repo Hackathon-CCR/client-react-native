@@ -14,6 +14,7 @@ import { useWindowDimensions } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerItems } from '@react-navigation/drawer';
 import ListaCarona from './src/views/lista-carona';
+import CadastroCarona from './src/views/cadastro-carona';
 
 const headerOptions = {
     headerStyle: {
@@ -37,7 +38,7 @@ function App() {
             <NavigationContainer>
                 <Drawer.Navigator
                     drawerType={isLargeScreen ? 'permanent' : 'back'}
-                    drawerStyle={isLargeScreen ? null : { width: '70%' }}
+                    drawerStyle={isLargeScreen ? null : { width: '100%' }}
                     overlayColor="transparent"
                     initialRouteName="Login"
                 >
@@ -69,6 +70,11 @@ function App() {
                         options={{ ...headerOptions, title: 'Lista de Carona' }}
                         name="ListaCarona"
                         component={ListaCarona}
+                    />
+                    <Drawer.Screen
+                        options={{ ...headerOptions, title: 'Meus Trajetos' }}
+                        name="CadastroCarona"
+                        component={CadastroCarona}
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />
