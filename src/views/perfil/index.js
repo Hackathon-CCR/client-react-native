@@ -6,16 +6,16 @@ import PerfilImage from '../../../imagens/perfil/admin.jpg';
 import StarImage from '../../../imagens/perfil/star.png';
 
 export default function Perfil({ route }) {
-    const { viajem } = route.params;
+    const viajem = route && route.params ? route.params.viajem : null;
     return (
         <ScrollView>
             <View style={styles.container}>
                 <Image source={PerfilImage} style={styles.perfilImage}></Image>
-                <Text style={styles.textNome}>{viajem.Nome}</Text>
+                <Text style={styles.textNome}>{viajem ? viajem.Nome : 'João Emanuel'}</Text>
                 <Text style={styles.textIdade}>39 anos</Text>
                 <View style={styles.containerCard}>
                     <Image source={StarImage} style={styles.starImage}></Image>
-                    <Text style={styles.textAvaliacao}>{viajem.Nota}</Text>
+                    <Text style={styles.textAvaliacao}>{viajem ? viajem.Nota : '5/5'}</Text>
                 </View>
 
                 <View style={styles.divLine}></View>

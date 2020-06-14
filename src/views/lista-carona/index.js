@@ -28,12 +28,6 @@ export default function ListaCarona({ route, navigation }) {
                                 <View>
                                     <Text>{viajem.Nome}</Text>
                                     <Text style={styles.horaCard}>{viajem.Hora}</Text>
-                                    <Button
-                                        style={styles.buttonStyle}
-                                        onPress={() => navigation.navigate('Perfil', { viajem })}
-                                    >
-                                        PERFIL
-                                    </Button>
                                 </View>
 
                                 <View style={{ flexDirection: 'row' }}>

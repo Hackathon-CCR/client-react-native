@@ -19,7 +19,7 @@ function Login() {
         function checkAuth() {
             isAuthenticated().then(async (x) => {
                 if (x) {
-                    navigation.dispatch(StackActions.replace('Home'));
+                    navigation.dispatch(StackActions.replace('CardNavegacao'));
                 }
             });
         }
@@ -36,7 +36,7 @@ function Login() {
             if (isFirstTime) {
                 navigation.dispatch(StackActions.replace('BoasVindas'));
             } else {
-                navigation.dispatch(StackActions.replace('Home'));
+                navigation.dispatch(StackActions.replace('CardNavegacao'));
             }
         } else {
             Toast.show('Falha ao autenticar, verifique seus dados!', {

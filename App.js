@@ -18,6 +18,7 @@ import CadastroCarona from './src/views/cadastro-carona';
 import DetalhesCarona from './src/views/detalhes-carona';
 import ReservaCarona from './src/views/reserva-carona';
 import ConfirmacaoCarona from './src/views/confirmacao-carona';
+import CardNavegacao from './src/views/card-navegacao/index';
 
 StatusBar.setBarStyle('light-content');
 
@@ -97,6 +98,11 @@ function App() {
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />
+                    <Drawer.Screen
+                        options={{ ...headerOptions, title: 'Home' }}
+                        name="CardNavegacao"
+                        component={CardNavegacao}
+                    />
                 </Stack.Navigator>
             </NavigationContainer>
         </PaperProvider>

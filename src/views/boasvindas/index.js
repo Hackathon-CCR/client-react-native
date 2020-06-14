@@ -11,7 +11,7 @@ export default function BoasVindas() {
     const navigation = useNavigation();
 
     function handleHome() {
-        navigation.dispatch(StackActions.replace('Home'));
+        navigation.dispatch(StackActions.replace('CardNavegacao'));
     }
 
     useEffect(() => {
