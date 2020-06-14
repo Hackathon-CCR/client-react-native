@@ -29,19 +29,14 @@ const headerOptions = {
 const Drawer = createDrawerNavigator();
 
 function App() {
-    const dimensions = useWindowDimensions();
+    //  const dimensions = useWindowDimensions();
 
-    const isLargeScreen = dimensions.width >= 768;
+    //const isLargeScreen = dimensions.width >= 768;
 
     return (
         <PaperProvider>
             <NavigationContainer>
-                <Drawer.Navigator
-                    drawerType={isLargeScreen ? 'permanent' : 'back'}
-                    drawerStyle={isLargeScreen ? null : { width: '100%' }}
-                    overlayColor="transparent"
-                    initialRouteName="Login"
-                >
+                <Drawer.Navigator overlayColor="transparent" initialRouteName="Login">
                     <Drawer.Screen
                         options={{
                             ...headerOptions,

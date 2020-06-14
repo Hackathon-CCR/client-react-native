@@ -3,10 +3,13 @@ import { View, ScrollView, Text, TextInput, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import { styles } from './styles';
 import caronas from '../../helpers/caronas.json';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Home({ navigation }) {
+export default function Home() {
     const [origem, setOrigem] = useState('');
     const [listaViajens, setListaViajens] = useState(caronas);
+
+    const navigation = useNavigation();
 
     useEffect(() => {
         let newCaronas = caronas.data;
@@ -17,7 +20,7 @@ export default function Home({ navigation }) {
     }, [origem]);
 
     handleBuscar = () => {
-        navigation.navigate('ListaCarona', { viajens: listaViajens });
+        navigation.jumpTo('ListaCarona', { viajens: listaViajens });
     };
 
     return (
