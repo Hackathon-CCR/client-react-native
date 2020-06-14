@@ -5,16 +5,17 @@ import { styles } from './styles';
 import PerfilImage from '../../../imagens/perfil/admin.jpg';
 import StarImage from '../../../imagens/perfil/star.png';
 
-export default function Perfil(props) {
+export default function Perfil({ route }) {
+    const { viajem } = route.params;
     return (
         <ScrollView>
             <View style={styles.container}>
                 <Image source={PerfilImage} style={styles.perfilImage}></Image>
-                <Text style={styles.textNome}>João Emanuel</Text>
+                <Text style={styles.textNome}>{viajem.Nome}</Text>
                 <Text style={styles.textIdade}>39 anos</Text>
                 <View style={styles.containerCard}>
                     <Image source={StarImage} style={styles.starImage}></Image>
-                    <Text style={styles.textAvaliacao}>5/5 - 7 avaliações</Text>
+                    <Text style={styles.textAvaliacao}>{viajem.Nota}</Text>
                 </View>
 
                 <View style={styles.divLine}></View>

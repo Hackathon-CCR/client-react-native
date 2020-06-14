@@ -40,4 +40,5 @@ export const styles = StyleSheet.create({
     horaCard: {
         color: '#D3D3D3',
     },
+    buttonStyle: {},
 });

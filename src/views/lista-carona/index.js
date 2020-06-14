@@ -2,6 +2,7 @@ import React from 'react';
 import { View, ScrollView, Image, Text } from 'react-native';
 import { Button, Card, Title, Paragraph } from 'react-native-paper';
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ListaCarona({ route, navigation }) {
     return (
@@ -23,6 +24,12 @@ export default function ListaCarona({ route, navigation }) {
                                 <View>
                                     <Text>{viajem.Nome}</Text>
                                     <Text style={styles.horaCard}>{viajem.Hora}</Text>
+                                    <Button
+                                        style={styles.buttonStyle}
+                                        onPress={() => navigation.navigate('Perfil', { viajem })}
+                                    >
+                                        PERFIL
+                                    </Button>
                                 </View>
 
                                 <View style={{ flexDirection: 'row' }}>
