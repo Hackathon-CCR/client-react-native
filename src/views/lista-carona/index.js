@@ -14,7 +14,11 @@ export default function ListaCarona({ route, navigation }) {
                 ></Image>
                 <Text style={styles.listCaronas}>Lista de Caronas</Text>
                 {route.params.viajens.map((viajem, index) => (
-                    <Card key={index} style={styles.cardViajem}>
+                    <Card
+                        key={index}
+                        style={styles.cardViajem}
+                        onPress={() => navigation.navigate('DetalhesCarona', { viajem })}
+                    >
                         <Card.Content>
                             <View style={styles.containerInCard}>
                                 <Image
