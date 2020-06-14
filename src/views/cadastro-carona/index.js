@@ -17,42 +17,42 @@ export default function CadastroCarona() {
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
         {
             key: 2,
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
         {
             key: 3,
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
         {
             key: 4,
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
         {
             key: 5,
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
         {
             key: 6,
             origem: 'Taubaté - SP',
             destino: 'Juiz de Fora - MG',
             valor: 20.0,
-            hora: '01/01/2019 12:00',
+            data: '01/01/2019 12:00',
         },
     ];
 
@@ -91,7 +91,7 @@ export default function CadastroCarona() {
                                 style={styles.input}
                                 value={hora}
                                 onChange={(e) => setHora(e.target.value)}
-                                label="Hora"
+                                label="Data"
                             />
                         </View>
                     </Card.Content>
@@ -114,7 +114,7 @@ export default function CadastroCarona() {
                                     <Text>Origem: {x.origem}</Text>
                                     <Text>Destino: {x.destino}</Text>
                                     <Text>Valor: {x.valor}</Text>
-                                    <Text>Hora: {x.hora}</Text>
+                                    <Text>Data: {x.data}</Text>
                                 </View>
                             </Card.Content>
                         </Card>
