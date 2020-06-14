@@ -21,7 +21,7 @@ export default function CardNavegacao({ navigation }) {
 
                 <Card style={styles.cardNav} onPress={() => navigation.navigate('Home')}>
                     <Card.Content>
-                        <Text style={styles.textCard}>Nova viajem</Text>
+                        <Text style={styles.textCard}>Procurar carona</Text>
                         <Image
                             style={styles.imageNav}
                             source={require('../../../imagens/place.png')}
@@ -31,7 +31,7 @@ export default function CardNavegacao({ navigation }) {
 
                 <Card style={styles.cardNav} onPress={() => navigation.navigate('CadastroCarona')}>
                     <Card.Content>
-                        <Text style={styles.textCard}>Nova Carona</Text>
+                        <Text style={styles.textCard}>Oferecer Carona</Text>
                         <Image
                             style={styles.imageNav}
                             source={require('../../../imagens/listaCarona.png')}
