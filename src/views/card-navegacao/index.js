@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView, Image, Text } from 'react-native';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
+import { Button, Card, Title, Paragraph, IconButton } from 'react-native-paper';
 import { styles } from './styles';
 import PerfilImage from '../../../imagens/perfil/admin.jpg';
 import StarImage from '../../../imagens/perfil/star.png';
@@ -11,16 +11,6 @@ export default function CardNavegacao({ navigation }) {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Button
-                    style={{ backgroundColor: '#f0284a' }}
-                    onPress={async () => {
-                        await logout();
-                        navigation.dispatch(StackActions.replace('Login'));
-                    }}
-                >
-                    <Text style={{ color: '#fff' }}>Logout</Text>
-                </Button>
-
                 <Card style={styles.cardNav} onPress={() => navigation.navigate('Perfil')}>
                     <Card.Content>
                         <Text style={styles.textCard}>Meu Perfil</Text>
@@ -50,6 +40,17 @@ export default function CardNavegacao({ navigation }) {
                         ></Image>
                     </Card.Content>
                 </Card>
+
+                <Button
+                    style={{ marginTop: 50, alignSelf: 'flex-end' }}
+                    icon={require('../../../imagens/logout.png')}
+                    onPress={async () => {
+                        await logout();
+                        navigation.dispatch(StackActions.replace('Login'));
+                    }}
+                >
+                    LOGOUT
+                </Button>
             </View>
         </ScrollView>
     );
