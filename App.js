@@ -16,6 +16,10 @@ import { DrawerItems } from '@react-navigation/drawer';
 import ListaCarona from './src/views/lista-carona';
 import CadastroCarona from './src/views/cadastro-carona';
 
+StatusBar.setBarStyle('light-content');
+
+const Stack = createStackNavigator();
+
 const headerOptions = {
     headerStyle: {
         backgroundColor: '#32e0c4',
@@ -36,7 +40,7 @@ function App() {
     return (
         <PaperProvider>
             <NavigationContainer>
-                <Drawer.Navigator overlayColor="transparent" initialRouteName="Login">
+                <Stack.Navigator initialRouteName="Login">
                     <Drawer.Screen
                         options={{
                             ...headerOptions,
@@ -53,6 +57,7 @@ function App() {
                     <Drawer.Screen
                         options={{
                             ...headerOptions,
+                            title: 'De volta para casa',
                         }}
                         name="Login"
                         component={Login}
@@ -74,7 +79,7 @@ function App() {
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />
-                </Drawer.Navigator>
+                </Stack.Navigator>
             </NavigationContainer>
         </PaperProvider>
     );
