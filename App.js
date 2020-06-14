@@ -16,7 +16,7 @@ import { DrawerItems } from '@react-navigation/drawer';
 import ListaCarona from './src/views/lista-carona';
 import CadastroCarona from './src/views/cadastro-carona';
 import DetalhesCarona from './src/views/detalhes-carona';
-import ConfirmacaoCarona from './src/views/confirmacao-carona';
+import ReservaCarona from './src/views/reserva-carona';
 
 StatusBar.setBarStyle('light-content');
 
@@ -85,9 +85,9 @@ function App() {
                         component={DetalhesCarona}
                     />
                     <Drawer.Screen
-                        options={{ ...headerOptions, title: 'Confirmar Carona' }}
-                        name="ConfirmacaoCarona"
-                        component={ConfirmacaoCarona}
+                        options={{ ...headerOptions, title: 'Reservar Carona' }}
+                        name="ReservaCarona"
+                        component={ReservaCarona}
                     />
                     <Drawer.Screen options={headerOptions} name="Alerta" component={Alerta} />
                     <Drawer.Screen options={headerOptions} name="Saude" component={Saude} />

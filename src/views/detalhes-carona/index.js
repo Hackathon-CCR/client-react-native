@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, ScrollView, Image, Text } from 'react-native';
-import { Button, Card, Title } from 'react-native-paper';
+import { View, ScrollView, Text } from 'react-native';
+import { Button, Card } from 'react-native-paper';
 import { styles } from './styles';
 import PerfilImage from '../../../imagens/perfil/admin.jpg';
-import StarImage from '../../../imagens/perfil/star.png';
 
 export default function DetalhesCarona({ route, navigation }) {
     const { viajem } = route.params;
@@ -48,10 +47,7 @@ export default function DetalhesCarona({ route, navigation }) {
                         >
                             VER PERFIL
                         </Button>
-                        <Button
-                            color="black"
-                            onPress={() => navigation.navigate('ConfirmacaoCarona')}
-                        >
+                        <Button color="black" onPress={() => navigation.navigate('ReservaCarona')}>
                             RESERVAR
                         </Button>
                     </View>
