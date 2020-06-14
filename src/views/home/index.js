@@ -41,14 +41,6 @@ export default function Home() {
         <ScrollView>
             <View>
                 <View style={styles.container}>
-                    <Button
-                        onPress={async () => {
-                            await logout();
-                            navigation.dispatch(StackActions.replace('Login'));
-                        }}
-                    >
-                        Logout
-                    </Button>
                     <Image style={styles.tinyLogo} source={require('../../../imagens/place.png')} />
                     <Text style={styles.title}>Para onde você quer ir?</Text>
 
