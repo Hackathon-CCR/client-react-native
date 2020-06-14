@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper';
 import { styles } from './styles';
 import caronas from '../../helpers/caronas.json';
 
-export default function Home() {
+export default function Home({ navigation }) {
     const [origem, setOrigem] = useState('');
     const [listaViajens, setListaViajens] = useState(caronas);
 
@@ -15,6 +15,10 @@ export default function Home() {
         }
         setListaViajens(newCaronas);
     }, [origem]);
+
+    handleBuscar = () => {
+        navigation.navigate('ListaCarona', { viajens: listaViajens });
+    };
 
     return (
         <ScrollView>
@@ -72,7 +76,7 @@ export default function Home() {
                         />
                     </View>
 
-                    <Button color="white" style={styles.mainButton} onPress={() => handleLogin()}>
+                    <Button color="white" style={styles.mainButton} onPress={() => handleBuscar()}>
                         BUSCAR
                     </Button>
                 </View>
